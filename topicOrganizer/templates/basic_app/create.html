@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+  {% block body_block %}
+  <h1>I  am Create</h1>
+  <form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" Class='btn btn-primary' name="" value="submit">
+  </form>
+  {% endblock %}

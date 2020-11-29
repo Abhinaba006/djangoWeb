@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+  {% block body_block %}
+  <h1>I  am View</h1>
+  {% if data %}
+  <table class='table'>
+    <thead>
+      <th>Name</th>
+      <th>Email</th>
+    </thead>
+
+    {% for d in data %}
+    <tr>
+      <td>{{ d.name }}</td>
+      <td>{{ d.email }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% else %}
+  <p>Nothing here</p>
+  {% endif %}
+  {% endblock %}
